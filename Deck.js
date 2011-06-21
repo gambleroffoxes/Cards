@@ -3,9 +3,9 @@ function Deck(size){
 	this.deck = new Array(size);
 }
 
-//need to set this up as an array
-
 Deck.prototype = new Pile(this.size)
+
+	//should write a deal function that returns a card
 
 	shuffle: function(n){
 		//shuffle(n) will swap two cards n times
