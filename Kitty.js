@@ -17,9 +17,9 @@ Kitty.prototype = new Pile(this.size)
 			else list += ", " + this.kitty[counter].rank + " of " + this.kitty[counter].suit + "s";
 		}
 		return list;
-	}
+	},
 
 	toString: function(){
-		return "This deck contains " + this.size + " card" + (this.size == 1 ? "." : "s.");
+		return "This kitty contains " + this.size + " card" + (this.size == 1 ? "." : "s.");
 	}
 }

@@ -16,7 +16,7 @@ Discard.prototype = new Pile(this.size)
 			listCounter++;
 		}
 		return cardList;
-	}
+	},
 
 	search: function(target){
 		//search the discard pile for a particular card
@@ -35,9 +35,9 @@ Discard.prototype = new Pile(this.size)
 			searcher++;
 		}
 		return "The card you are searching for cannot be found."
-	}
+	},
 
 	toString: function(){
-		return "This deck contains " + this.size + " card" + (this.size == 1 ? "." : "s.");
+		return "This discard pile contains " + this.size + " card" + (this.size == 1 ? "." : "s.");
 	}
 }

@@ -21,7 +21,7 @@ Deck.prototype = new Pile(this.size)
 				shuffleCounter++;
 			}
 		}
-	}
+	},
 
 	toString: function(){
 		return "This deck contains " + this.size + " card" + (this.size == 1 ? "." : "s.");
