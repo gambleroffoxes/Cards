@@ -1,14 +1,13 @@
 function Pile(size){
 	this.size = size;
+	this.pile = new Array(size)
 }
-
-//instantiate as an array
 
 Pile.prototype = {
 
 	addCard: function(c){
 		//add card c to the counter's position + 1 and add 1 to the counter
-		this[this.size + 1] = c;
+		this.pile[this.size + 1] = c;
 		this.size++;
 	}
 
