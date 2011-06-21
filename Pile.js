@@ -8,8 +8,8 @@ Pile.prototype = {
 
 	addCard: function(c){
 		//add card c to the counter's position + 1 and add 1 to the counter
-		this[this.size + 1] = c
-		this.size++
+		this[this.size + 1] = c;
+		this.size++;
 	}
 
 	toString: function(){
