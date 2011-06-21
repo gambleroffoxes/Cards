@@ -12,7 +12,7 @@ Discard.prototype = new Pile(this.size)
 		while listCounter < this.size {
 			if listCounter = 0
 				cardList = this.discard[0];
-			else cardList += this.discard[listCounter];
+			else cardList += ", " + this.discard[listCounter];
 			listCounter++;
 		}
 		return cardList;
