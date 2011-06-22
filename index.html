@@ -8,26 +8,51 @@
 		<script src="Hand.js"></script>
 		<script src="Discard.js"></script>
 		<script src="Table.js"></script>
+		<script src="War.js"></script>
 
 		<script>
 			function main() {
+				var a = new Card(9, "heart");
+				var b = new Card(14, "diamond");
 				var c = new Card(2, "spade");
-				var d = new Card(3, "diamond");
-				var e = new Card(4, "heart");
+				var d = new Card(6, "club");
+				var e = new Card(13, "spade");
 				var f = new Card(10, "club");
-				var table = new Table(2);
+				var g = new Card(3, "club");
+				var h = new Card(5, "club");
+				var i = new Card(6, "heart");
+				var j = new Card(7, "club");
+				var war = new War(2);
 				var hand1 = new Hand(0);
 				var hand2 = new Hand(0);
+				hand1.addCard(a);
+				hand1.addCard(b);
 				hand1.addCard(c);
-				hand2.addCard(d);
-				hand2.addCard(e);
-				hand1.addCard(f);
-				table.take(hand1, 2, hand2, 2)
-				alert(hand1.list());
-				alert(hand2.list());
+				hand1.addCard(d);
+				hand1.addCard(e);
+				hand2.addCard(f);
+				hand2.addCard(g);
+				hand2.addCard(h);
+				hand2.addCard(i);
+				hand2.addCard(j);
+				alert(document.body);
+				document.write(hand1.list() + "<br>");
+				document.write(hand2.list());
+			}
+			function input(n) {
 			}
 		</script>
 	</head>
 	<body onLoad="main()">
+		<div onClick="input(1)">1</div>
+		<div onClick="input(2)">2</div>
+		<div onClick="input(3)">3</div>
+		<div onClick="input(4)">4</div>
+		<div onClick="input(5)">5</div>
+		<div onClick="input(6)">6</div>
+		<div onClick="input(7)">7</div>
+		<div onClick="input(8)">8</div>
+		<div onClick="input(9)">9</div>
+		<div onClick="input(10)">10</div>
 	</body>
 </html>
