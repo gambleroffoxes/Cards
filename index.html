@@ -1,11 +1,18 @@
 <html>
 	<head>
 		<script src="Card.js"></script>
+		<script src="Pile.js"></script>
 
 		<script>
-			function main(){
+			function main() {
 				var c = new Card(2, "spade");
-				alert(c);
+				var d = new Card(3, "diamond");
+				var e = new Card(4, "heart");
+				var f = new Card(10, "club");
+				var pile = new Pile(0);
+				pile.addCard(c);
+				alert(pile);
+				alert(pile.list());
 			}
 		</script>
 	</head>
