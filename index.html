@@ -5,6 +5,7 @@
 		<script src="Pile.js"></script>
 		<script src="Deck.js"></script>
 		<script src="Kitty.js"></script>
+		<script src="Hand.js"></script>
 
 		<script>
 			function main() {
@@ -12,15 +13,14 @@
 				var d = new Card(3, "diamond");
 				var e = new Card(4, "heart");
 				var f = new Card(10, "club");
-				var deck = new Deck(0);
-				deck.addCard(c);
-				deck.addCard(d);
-				deck.addCard(e);
-				deck.addCard(f);
-				alert(deck);
-				deck.shuffle(17);
-				alert(deck);
-				alert(deck.search(c));
+				var hand = new Hand(0);
+				hand.addCard(c);
+				hand.addCard(d);
+				hand.addCard(e);
+				hand.addCard(f);
+				alert(hand);
+				alert(hand.list());
+				alert(hand.search(c));
 			}
 		</script>
 	</head>
