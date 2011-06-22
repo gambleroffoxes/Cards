@@ -15,7 +15,18 @@ Hand.prototype.extend({
 	discard: function(c, dp){
 		//FIXME
 		//remove card c from the hand and place it in discard pile dp
-		this.search(c);
+		var error = "This hand does not have any cards to discard.";
+		if (this.size == 0) return error;
+		var location = this.search(c);
+		var toDiscard = null;
+		if (location == -1) return "This hand does not contain the card you wish to discard.";
+		toDiscard = this.pile[location - 1];
+		while (location < this.size) {
+			this.pile[location - 1] = this.pile[location];
+			location++;
+		}
+		this.size--;
+		dp.addCard(toDiscard);
 	},
 
 	toString: function(){

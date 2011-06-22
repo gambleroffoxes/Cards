@@ -6,7 +6,7 @@ function Pile(size){
 Pile.prototype = {
 
 	addCard: function(c){
-		//add card c to the pile
+		//add card c to the pile		
 		this.pile[this.size] = c;
 		this.size++;
 	},
@@ -38,12 +38,12 @@ Pile.prototype = {
 		while (searcher < this.size) {
 			currentCard = this.pile[searcher];
 			if (target == currentCard) {
-				return "The " + target.rank + " of " + target.suit + "s is the number " + (searcher + 1) + " card in the pile.";
+				return searcher + 1;
 				break;
 			}
 			searcher++;
 		}
-		return "The card you are searching for cannot be found.";
+		return -1;
 	},
 
 

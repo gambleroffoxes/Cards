@@ -1,6 +1,5 @@
 function Discard(size){
-	this.size = size;
-	this.discard = new Array(size);
+	Pile.call(this, size);
 }
 
 Discard.prototype.inherits(Pile);

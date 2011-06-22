@@ -6,6 +6,7 @@
 		<script src="Deck.js"></script>
 		<script src="Kitty.js"></script>
 		<script src="Hand.js"></script>
+		<script src="Discard.js"></script>
 
 		<script>
 			function main() {
@@ -13,17 +14,19 @@
 				var d = new Card(3, "diamond");
 				var e = new Card(4, "heart");
 				var f = new Card(10, "club");
-				var deck = new Deck(0);
+				var dp = new Discard(0);
 				var hand = new Hand(0);
-				deck.addCard(c);
-				deck.addCard(d);
-				deck.addCard(e);
-				deck.addCard(f);
-				hand.draw(deck);
-				alert(deck);
-				alert(deck.list());
+				hand.addCard(c);
+				hand.addCard(d);
+				hand.addCard(e);
+				hand.addCard(f);
+				alert(hand);
+				hand.discard(c, dp);
 				alert(hand);
 				alert(hand.list());
+				alert(hand.search(d));
+				alert(hand.search(e));
+				alert(hand.search(f));
 			}
 		</script>
 	</head>
