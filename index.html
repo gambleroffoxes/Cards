@@ -7,6 +7,7 @@
 		<script src="Kitty.js"></script>
 		<script src="Hand.js"></script>
 		<script src="Discard.js"></script>
+		<script src="Table.js"></script>
 
 		<script>
 			function main() {
@@ -14,19 +15,16 @@
 				var d = new Card(3, "diamond");
 				var e = new Card(4, "heart");
 				var f = new Card(10, "club");
-				var dp = new Discard(0);
-				var hand = new Hand(0);
-				hand.addCard(c);
-				hand.addCard(d);
-				hand.addCard(e);
-				hand.addCard(f);
-				alert(hand);
-				hand.discard(c, dp);
-				alert(hand);
-				alert(hand.list());
-				alert(hand.search(d));
-				alert(hand.search(e));
-				alert(hand.search(f));
+				var table = new Table(2);
+				var hand1 = new Hand(0);
+				var hand2 = new Hand(0);
+				hand1.addCard(c);
+				hand2.addCard(d);
+				hand2.addCard(e);
+				hand1.addCard(f);
+				table.take(hand1, 2, hand2, 2)
+				alert(hand1.list());
+				alert(hand2.list());
 			}
 		</script>
 	</head>
