@@ -1,8 +1,10 @@
 <html>
 	<head>
+		<script src="magic.js"></script>
 		<script src="Card.js"></script>
 		<script src="Pile.js"></script>
-		<script src="magic.js"></script>
+		<script src="Deck.js"></script>
+		<script src="Kitty.js"></script>
 
 		<script>
 			function main() {
@@ -10,10 +12,15 @@
 				var d = new Card(3, "diamond");
 				var e = new Card(4, "heart");
 				var f = new Card(10, "club");
-				var pile = new Pile(0);
-				pile.addCard(c);
-				alert(pile);
-				alert(pile.list());
+				var deck = new Deck(0);
+				deck.addCard(c);
+				deck.addCard(d);
+				deck.addCard(e);
+				deck.addCard(f);
+				alert(deck);
+				deck.shuffle(17);
+				alert(deck);
+				alert(deck.search(c));
 			}
 		</script>
 	</head>
