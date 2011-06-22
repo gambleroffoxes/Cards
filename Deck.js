@@ -3,7 +3,9 @@ function Deck(size){
 	this.deck = new Array(size);
 }
 
-Deck.prototype = new Pile(this.size)
+Deck.prototype.inherits(Pile);
+
+Deck.prototype.extend({
 
 	//should write a deal function that returns a card
 
@@ -26,4 +28,4 @@ Deck.prototype = new Pile(this.size)
 	toString: function(){
 		return "This deck contains " + this.size + " card" + (this.size == 1 ? "." : "s.");
 	}
-}
+});
