@@ -3,7 +3,9 @@ function Kitty(size){
 	this.kitty = new Array(size);
 }
 
-Kitty.prototype = new Pile(this.size)
+Kitty.prototype.inherits(Pile);
+
+Kitty.prototype.extend({
 
 	topCard: function(n){
 		//displays the top n cards of the kitty
@@ -22,4 +24,4 @@ Kitty.prototype = new Pile(this.size)
 	toString: function(){
 		return "This kitty contains " + this.size + " card" + (this.size == 1 ? "." : "s.");
 	}
-}
+});
