@@ -6,7 +6,14 @@ Deck.prototype.inherits(Pile);
 
 Deck.prototype.extend({
 
-	//should write a deal function that returns a card
+	deal: function(){
+		//deals the top card off of the deck
+		var c = null;
+		c = this.pile[this.size - 1];
+		this.pile[this.size - 1] = 0;
+		this.size--;
+		return c;
+	},
 
 	shuffle: function(n){
 		//shuffle(n) will swap two cards n times

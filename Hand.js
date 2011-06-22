@@ -7,12 +7,9 @@ Hand.prototype.inherits(Pile);
 Hand.prototype.extend({
 
 	draw: function(d){
-		//FIXME
-		//should write a deal function in deck that returns a card
 		//draw the top card of deck d and place it at the back of the hand
-		this.hand[this.size] = d.deck[d.size - 1];
+		this.pile[this.size] = d.deal();
 		this.size++;
-		d.deck.size--;
 	},
 
 	discard: function(c, dp){

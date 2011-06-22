@@ -13,14 +13,17 @@
 				var d = new Card(3, "diamond");
 				var e = new Card(4, "heart");
 				var f = new Card(10, "club");
+				var deck = new Deck(0);
 				var hand = new Hand(0);
-				hand.addCard(c);
-				hand.addCard(d);
-				hand.addCard(e);
-				hand.addCard(f);
+				deck.addCard(c);
+				deck.addCard(d);
+				deck.addCard(e);
+				deck.addCard(f);
+				hand.draw(deck);
+				alert(deck);
+				alert(deck.list());
 				alert(hand);
 				alert(hand.list());
-				alert(hand.search(c));
 			}
 		</script>
 	</head>
